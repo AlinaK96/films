@@ -1,0 +1,98 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список фильмов Marvel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #548dd6;
+        }
+        .movie-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            width: 45%;
+            box-sizing: border-box;
+        }
+        li {
+            background: #fff;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        li:hover {
+            background: #ebf8ff;
+        }
+        .watched {
+            text-decoration: line-through;
+            color: #888;
+            background: #d3d3d3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Список фильмов Marvel</h1>
+    <div class="movie-container">
+        <ul id="movie-list">
+            <li>Капитан Америка: Первый мститель (2011)</li>
+            <li>Капитан Марвел (2019)</li>
+            <li>Железный человек (2008)</li>
+            <li>Железный человек 2 (2010)</li>
+            <li>Невероятный Халк (2008)</li>
+            <li>Тор (2011)</li>
+            <li>Мстители (2012)</li>
+            <li>Железный человек 3 (2013)</li>
+            <li>Тор 2: Царство тьмы (2013)</li>
+            <li>Первый мститель: Другая война (2014)</li>
+            <li>Стражи Галактики (2014)</li>
+            <li>Стражи Галактики. Часть 2 (2017)</li>
+            <li>Мстители: Эра Альтрона (2015)</li>
+            <li>Человек-муравей (2015)</li>
+            <li>Первый мститель: Противостояние (2016)</li>
+            <li>Чёрная пантера (2018)</li>
+            <li>Человек-паук: Возвращение домой (2017)</li>
+        </ul>
+        <ul>
+            <li>Доктор Стрэндж (2016)</li>
+            <li>Тор: Рагнарёк (2017)</li>
+            <li>Человек-муравей и Оса (2018)</li>
+            <li>Мстители: Война бесконечности (2018)</li>
+            <li>Мстители: Финал (2019)</li>
+            <li>Человек-паук: Вдали от дома (2019)</li>
+            <li>Чёрная Вдова (2021)</li>
+            <li>Шан-Чи и легенда десяти колец (2021)</li>
+            <li>Вечные (2021)</li>
+            <li>Человек-паук: Нет пути домой (2021)</li>
+            <li>Доктор Стрэндж: В мультивселенной безумия (2022)</li>
+            <li>Тор: Любовь и гром (2022)</li>
+            <li>Чёрная пантера: Ваканда навеки (2022)</li>
+            <li>Человек-муравей и Оса: Квантомания (2023)</li>
+            <li>Стражи Галактики. Часть 3 (2023)</li>
+        </ul>
+    </div>
+    <script>
+        document.querySelectorAll('#movie-list li, .movie-container ul li').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('watched');
+            });
+        });
+    </script>
+</body>
+</html>
