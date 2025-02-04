@@ -88,9 +88,21 @@
         </ul>
     </div>
     <script>
-        document.querySelectorAll('#movie-list li, .movie-container ul li').forEach(item => {
-            item.addEventListener('click', () => {
-                item.classList.toggle('watched');
+        document.addEventListener("DOMContentLoaded", () => {
+            const movieItems = document.querySelectorAll('#movie-list li, .movie-container ul li');
+            const savedMovies = JSON.parse(localStorage.getItem('watchedMovies')) || [];
+            
+            movieItems.forEach(item => {
+                if (savedMovies.includes(item.textContent)) {
+                    item.classList.add('watched');
+                }
+                item.addEventListener('click', () => {
+                    item.classList.toggle('watched');
+                    const updatedMovies = Array.from(movieItems)
+                        .filter(movie => movie.classList.contains('watched'))
+                        .map(movie => movie.textContent);
+                    localStorage.setItem('watchedMovies', JSON.stringify(updatedMovies));
+                });
             });
         });
     </script>
