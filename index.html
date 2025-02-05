@@ -17,15 +17,15 @@
         }
         .movie-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             flex-wrap: wrap;
-            max-width: 900px;
+            max-width: 1500px;
             margin: 0 auto;
         }
         ul {
             list-style-type: none;
             padding: 0;
-            width: 45%;
+            width: 33%;
             box-sizing: border-box;
         }
         li {
@@ -45,6 +45,11 @@
             color: #888;
             background: #d3d3d3;
         }
+        .upcoming {
+            background: #548cd64d;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
@@ -86,7 +91,16 @@
             <li>Человек-муравей и Оса: Квантомания (2023)</li>
             <li>Стражи Галактики. Часть 3 (2023)</li>
         </ul>
+        <ul>
+            <li class="upcoming">Капитан Америка: Дивный новый мир (14 февраля 2025)</li>
+            <li class="upcoming">Громовержцы (2 мая 2025)</li>
+            <li class="upcoming">Фантастическая четвёрка: Первые шаги (25 июля 2025)</li>
+            <li class="upcoming">Блэйд (7 ноября 2025)</li>
+            <li class="upcoming">Мстители: День Дума (1 мая 2026)</li>
+            <li class="upcoming">Мстители: Секретные войны (7 мая 2027)</li>
+        </ul>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const movieItems = document.querySelectorAll('#movie-list li, .movie-container ul li');
